@@ -17,10 +17,10 @@ class App extends React.Component {
   }
   getWeather = async (e) => {
     e.preventDefault();
-    const city = e.target.element.city.value;
-    const country = e.target.element.country.value;
+    const city = e.target.elements.city.value;
+    const country = e.target.elements.country.value;
 
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`);
+    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}&units=imperial`);
     const data = await api_call.json();
 
     if (city && country) {
@@ -30,7 +30,7 @@ class App extends React.Component {
         city:data.name,
         country: data.sys.country,
         humidity: data.main.humidity,
-        desciption:data.weather[0].desciption,
+        description:data.weather[0].description,
         error: ""
       })
       }else{
@@ -39,7 +39,7 @@ class App extends React.Component {
           city: "",
           country: "",
           humidity: "",
-          desciption: "",
+          description: "",
           error: "Please Enter A value"
 
         })
@@ -49,13 +49,13 @@ class App extends React.Component {
     return (
       <div>
       <Titles/>
-      <Form getWeather={this.getWeathere}/>
+      <Form getWeather={this.getWeather}/>
       <Weather
         temperature={this.state.temperature}
         city = {this.state.city}
         country={this.state.country}
         humidity={this.state.humidity}
-        desciption={this.state.desciption}
+        description={this.state.description}
         error={this.state.error}
         />
 
