@@ -1,1 +1,34 @@
+body {
+  background-color: #00FFFF;
+  background: url("weather.jpg");
 
+}
+
+.titles {
+  display: center;
+  justify-content:center;
+  font-style: none;
+  padding-top: 40px;
+
+
+}
+.form {
+  align-items: center;
+  padding-top:7px;
+}
+
+
+.weather {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 10px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: flex;
+  color: black;
+}
