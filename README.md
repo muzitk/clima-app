@@ -1,1 +1,1 @@
-This project utilizes react and weather API. Users are able to put and city and country and get the accurate weather/climate of that city. 
+This project utilizes react, weather API, and a little bit of css. Users are able to put and city and country and get the accurate weather/climate of that city. 
